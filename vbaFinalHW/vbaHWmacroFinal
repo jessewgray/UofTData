@@ -1,0 +1,131 @@
+Sub homework()
+For Each ws In ActiveWorkbook.Worksheets
+    'MsgBox (ws.Name)
+    Dim numberOfSheets As Integer
+    numberOfSheets = ActiveWorkbook.Worksheets.Count
+    
+    Dim sheetNumber As Integer
+    
+
+        Dim numberOfColumns As Long
+        'Find the last non-blank cell in row 1
+        numberOfColumns = ws.Cells(1, Columns.Count).End(xlToLeft).Column
+        
+        Dim numberOfRows As Long
+        
+        
+        
+        
+        'Find the last non-blank cell in column (A)1
+        numberOfRows = ws.Cells(Rows.Count, 1).End(xlUp).Row
+        
+        'MsgBox (numberOfColumns)
+        'MsgBox (numberOfRows)
+        
+        ws.Cells(1, numberOfColumns + 2).Value = "Ticker"
+        ws.Cells(1, numberOfColumns + 3).Value = "Total Stock Volume"
+        
+        Cells(1, numberOfColumns + 3).Select
+        Selection.EntireColumn.Insert
+        ws.Cells(1, numberOfColumns + 3) = "Yearly Change"
+    
+        Cells(1, numberOfColumns + 3).Select
+        Selection.EntireColumn.Insert
+        ws.Cells(1, numberOfColumns + 3) = "Percent Change"
+        
+        Dim volume As Long
+
+        
+        'MsgBox (numberOfColumns)
+        
+    
+        Dim aTotal As Long
+        aTotal = 0
+        Dim volTotal As Long
+        Dim j As Integer
+        j = 2
+        
+        For i = 2 To numberOfRows
+            ticker = ws.Cells(i, 1).Value
+            nextTicker = ws.Cells(i, 1).Offset(1, 0).Value
+            openNum = ws.Cells(i, 3).Value
+            closeNum = ws.Cells(i, 6).Value
+                If ticker = nextTicker Then
+                    aTotal = aTotal + 1
+                    volume = ws.Cells(i, numberOfColumns).Value
+                    nextVol = ws.Cells(i, numberOfColumns).Offset(1, 0).Value
+                        If volume > nextVol Then
+                            volume = volume
+                        Else
+                            volume = nextVol
+                        End If
+                        If openNum <> ws.Cells(i, 3).Offset(-1, 0).Value Then
+                            openNum = openNum
+                        End If
+                         
+                        yearlyChange = openNum - closeNum
+                        percentChange = yearlyChange * 100
+                Else
+                    
+                    For numJ = j To j
+                        ws.Cells(j, numberOfColumns + 5) = volume
+                        ws.Cells(j, numberOfColumns + 2) = ticker
+                        ws.Cells(j, numberOfColumns + 4) = yearlyChange
+                        ws.Cells(j, numberOfColumns + 3) = percentChange
+                        If percentChange > 0 Then
+                            ws.Cells(j, numberOfColumns + 3).Interior.ColorIndex = 4
+                        Else
+                            ws.Cells(j, numberOfColumns + 3).Interior.ColorIndex = 3
+                        End If
+                        
+                        j = j + 1
+                    Next numJ
+                    'MsgBox (volume)
+                
+                'Exit For
+            
+                End If
+        Next i
+
+        maxNum = 0
+        minNum = 0
+        gtv = 0
+        bigTicker = "startValue"
+        smallTicker = "startValue"
+        gtvTicker = "startValue"
+       
+        For i = 2 To numberOfRows
+            If ws.Cells(i, numberOfColumns + 3) > maxNum Then
+                maxNum = ws.Cells(i, numberOfColumns + 3)
+                bigTicker = ws.Cells(i, 1)
+            End If
+            If ws.Cells(i, numberOfColumns + 3) < minNum Then
+                minNum = ws.Cells(i, numberOfColumns + 3)
+                smallTicker = ws.Cells(i, 1)
+            End If
+            If ws.Cells(i, numberOfColumns + 5) > gtv Then
+                gtv = ws.Cells(i, numberOfColumns + 5)
+                gtvTicker = ws.Cells(i, 1)
+            End If
+        Next i
+        ws.Cells(1, numberOfColumns + 9) = "Ticker"
+        ws.Cells(1, numberOfColumns + 10) = "Value"
+        ws.Cells(2, numberOfColumns + 8) = "Greatest Increase"
+        ws.Cells(2, numberOfColumns + 9) = bigTicker
+        ws.Cells(2, numberOfColumns + 10) = maxNum
+        ws.Cells(3, numberOfColumns + 8) = "Greatest Decrease"
+        ws.Cells(3, numberOfColumns + 9) = smallTicker
+        ws.Cells(3, numberOfColumns + 10) = minNum
+        ws.Cells(4, numberOfColumns + 8) = "Greatest total value"
+        ws.Cells(4, numberOfColumns + 9) = gtvTicker
+        ws.Cells(4, numberOfColumns + 10) = gtv
+        
+
+
+     Next ws
+End Sub
+
+
+
+
+
