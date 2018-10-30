@@ -8,26 +8,34 @@ csvPath = os.path.join(".", "resources", "election_data.csv")
 
 pandasCsv = pd.read_csv(csvPath)
 
+#print(pandasCsv["Candidate"])
+#check = pd.DataFrame.iterrows(pandasCsv["Candidate"])
+#print(check)
+#c = pandasCsv
+#print(c)
+
+
+
 khanVotes = 0
 correyVotes = 0
 liVotes = 0
 other = 0
 
-for i in pandasCsv:
-    
-    if str(pandasCsv["Candidate"]) == "Khan":
-        khanVotes = khanVotes + 1
-    elif str(pandasCsv["Candidate"]) == "Correy":
-        correyVotes = correyVotes + 1
-    elif str(pandasCsv["Candidate"]) == "Li":
-        liVotes = liVotes + 1
-    else:
-        other = other + 1
+for index, row in pandasCsv.iterrows():
+   #print(pandasCsv["Candidate"])
+
+   if str(pandasCsv["Candidate"]) == "Khan":
+      khanVotes = khanVotes + 1
+   elif str(pandasCsv["Candidate"]) == "Correy":
+      correyVotes = correyVotes + 1
+   elif str(pandasCsv["Candidate"]) == "Li":
+      liVotes = liVotes + 1
+   else:
+      other = other + 1
 print(f"Khan Votes: {khanVotes}")
 print(f"Correy Votes: {correyVotes}")
 print(f"Li Votes: {liVotes}")
 print(f"Other Votes: {other}")
 print("Election Results")
 print(f"Total Votes: {len(pandasCsv['Voter ID'])}")
-
 
