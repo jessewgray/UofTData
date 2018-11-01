@@ -21,9 +21,10 @@ correyVotes = 0
 liVotes = 0
 other = 0
 
-for index, row in pandasCsv.iterrows():
-   #print(pandasCsv["Candidate"])
-
+for row in pandasCsv["Candidate"]:
+   #print(row)
+#for row in pandasCsv:
+   
    if str(pandasCsv["Candidate"]) == "Khan":
       khanVotes = khanVotes + 1
    elif str(pandasCsv["Candidate"]) == "Correy":
