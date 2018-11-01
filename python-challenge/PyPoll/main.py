@@ -5,38 +5,46 @@ import string
 
 csvPath = os.path.join(".", "resources", "election_data.csv")
 
-
 pandasCsv = pd.read_csv(csvPath)
-
-#print(pandasCsv["Candidate"])
-#check = pd.DataFrame.iterrows(pandasCsv["Candidate"])
-#print(check)
-#c = pandasCsv
-#print(c)
-
 
 
 khanVotes = 0
 correyVotes = 0
 liVotes = 0
 other = 0
+index = 0
 
-for row in pandasCsv["Candidate"]:
-   #print(row)
-#for row in pandasCsv:
-   
-   if str(pandasCsv["Candidate"]) == "Khan":
-      khanVotes = khanVotes + 1
-   elif str(pandasCsv["Candidate"]) == "Correy":
-      correyVotes = correyVotes + 1
-   elif str(pandasCsv["Candidate"]) == "Li":
-      liVotes = liVotes + 1
-   else:
-      other = other + 1
-print(f"Khan Votes: {khanVotes}")
-print(f"Correy Votes: {correyVotes}")
-print(f"Li Votes: {liVotes}")
-print(f"Other Votes: {other}")
+totalVotes = len(pandasCsv['Voter ID'])
+
+for row in pandasCsv['Candidate']:
+    if str(pandasCsv["Candidate"][index]) == "Khan":
+        khanVotes = khanVotes + 1
+    elif str(pandasCsv["Candidate"][index]) == "Correy":
+        correyVotes = correyVotes + 1
+    elif str(pandasCsv["Candidate"][index]) == "Li":
+        liVotes = liVotes + 1
+    else:
+        other = other + 1
+    index = index + 1
+
+khanPercent = round(khanVotes / totalVotes * 100)
+correyPercent = round(correyVotes / totalVotes * 100)
+liPercent = round(liVotes / totalVotes * 100)
+otherPercent = round(other / totalVotes * 100)
+
+l = [khanVotes, correyVotes, liVotes, other]
+max(l)
+
 print("Election Results")
+print("------------------")
 print(f"Total Votes: {len(pandasCsv['Voter ID'])}")
+print("------------------")
+print(f"Khan Votes: %{khanPercent} {khanVotes}")
+print(f"Correy Votes: %{correyPercent} {correyVotes}")
+print(f"Li Votes: %{liPercent} {liVotes}")
+print(f"Other Votes: %{otherPercent} {other}")
+print("------------------")
+print(f"Winner: Khan {khanVotes}")
+print("------------------")
+
 
