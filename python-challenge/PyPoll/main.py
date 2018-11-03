@@ -48,3 +48,18 @@ print(f"Winner: Khan {khanVotes}")
 print("------------------")
 
 
+with open("resources/electionResults.csv", "w", newline="", encoding = "utf-8") as csvElectionResultsFile:
+    csvWriter = csv.writer(csvElectionResultsFile, delimiter=",")
+    csvWriter.writerow(["Election Results"])
+    csvWriter.writerow(["------------------"])
+    csvWriter.writerow([f"Total Votes: {len(pandasCsv['Voter ID'])}"])
+    csvWriter.writerow(["------------------"])
+    csvWriter.writerow([f"Khan Votes: %{khanPercent} {khanVotes}"])
+    csvWriter.writerow([f"Correy Votes: %{correyPercent} {correyVotes}"])
+    csvWriter.writerow([f"Li Votes: %{liPercent} {liVotes}"])
+    csvWriter.writerow([f"Other Votes: %{otherPercent} {other}"])
+    csvWriter.writerow(["------------------"])
+    csvWriter.writerow([f"Winner: Khan {khanVotes}"])
+    csvWriter.writerow(["------------------"])    
+    
+    
