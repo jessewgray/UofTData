@@ -1,0 +1,111 @@
+
+.bg-menu-color{
+	background:#00e7e7;
+}
+.theTitle{
+    font-size: 26px;
+    font-weight: 700;
+}
+.theTitle a{
+	color: white;
+	text-shadow:1px 1px 1px rgba(0,0,0,.5);
+}
+.theTitle a:hover{
+	color:white;
+	text-shadow:2px 2px 2px rgba(0,0,0,.5);
+	text-decoration:none;
+}
+
+.dropdown-menu.show{
+	background-color: #00e7e7 !important;
+	border:0px !important;
+}
+.dropdown-item:hover{
+	background-color: transparent !important;
+	color: rgba(0,0,0,.5) !important;
+}
+
+nav button:focus{
+	outline: 5px auto white !important;
+}
+.navbar{
+	margin-bottom: 30px;
+}
+.container{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.pageTitle{
+	border-bottom:solid 1px lightgrey;
+	margin-bottom: 20px;
+}
+
+.maxIt{
+	max-width: 100%;
+}
+
+.blueBorder{
+	border:solid 1px #00e7e7;
+}
+.visualization{
+	margin-bottom:20px;
+}
+.pageTitle h1, .visualization{
+	color:#00e7e7;
+	text-shadow:1px 1px 1px rgba(0,0,0,.5);
+}
+
+.landingImage{
+	max-width: 425px;
+	float:left;
+}
+
+.nextSection{
+	clear:left;
+	padding: 20px 0px 10px 0px;
+}
+.columnTitles{
+	background: #00e7e7; 
+}
+
+.columnTitles .col-md-2, .columnTitles .col-md-1{
+	overflow: hidden;
+	border: solid 1px;
+}
+
+.tableRows .col-md-2, .tableRows .col-md-1{
+	overflow: hidden;
+	border:solid 1px;
+}
+.greyBG{
+	background:lightgrey;
+}
+.theFooter{
+	background:#00e7e7;
+}
+.signOff{
+	text-align: center;
+	color:white;
+	padding:20px 0px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	margin-top:30px;
+}
+
+
+@media(max-width:767px){
+	.landingImage{
+	max-width: 325px;
+}
+	.tableRows{
+		margin-bottom:10px;
+	}
+}
+@media(max-width:550px){
+	.landingImage{
+	max-width: 100%;
+}
+}
+
+
+
