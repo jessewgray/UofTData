@@ -66,7 +66,7 @@ function tempLink(){
      
     //only run ajax call on datapage
     $(document).ready(function () {
-        if(window.location.href.indexOf("data.html") > -1) // This doesn't work, any suggestions?
+        if(window.location.href.indexOf("data.html") > -1) 
         {
              getStats();
              console.log('dataPage')
