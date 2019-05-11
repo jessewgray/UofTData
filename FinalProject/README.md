@@ -31,7 +31,7 @@ Once the user selects a category of marine life from the dropdown, another API c
 
 This page is to explore various marine life. The user is created with a dropdown of all the marine life categories (23 in total). Once a category is selected, the same loading icon (gif of surgeon fish) appears on the page while an API call is performed to retreive information about all the species in the category selected. A D3 bar graph populates on the page to give the user insight about the number or percent (depends on the axis selected) of species in the selected marine life category by conservation status. 
 
-![marinelife_barometer](Images/marinelife_barometer.gif)
+![marinelife_barometer](rdImages/marinelife_barometer.gif)
 
 Along with the bar graph, flip cards populate on the page with all the species in the category selected.The front of the card is a single image of the species. On the back of the card there is: (1) common name, (2) scientific name, (3) depth, (4) population trend, (5) conservation status, (6) a 'call map' button that opens a modal with a world map where the countries highlighted in green are where the selected species is prevalent, (7) a button for a modal popup with an image slider.  
 
