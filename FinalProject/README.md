@@ -4,7 +4,7 @@
 
 ![Home](rdImages/Home.png)
 
-This app is for those whome love Scuba Diving and need some help planning their next vacation. The inspiration for this project began with Sara Hovakeemian, an avid diving enthusiast whom found problems while planning her next scuba diving adventure. She plans her vacations one of two ways:
+This app is for those whom love Scuba Diving and need some help planning their next vacation. The inspiration for this project began with Sara Hovakeemian, an avid diving enthusiast whom found problems while planning her next scuba diving adventure. She plans her vacations one of two ways:
 
 1) Either wanting to learn about the marine life in the location she was traveling to. Or,
 2) Planning a whole trip around seeing a certain species and trying to find out where to go.
