@@ -21,9 +21,9 @@ On the country search page, the user is greeted with a world map (generated thro
 
 Once the user selects a category of marine life from the dropdown, another API call is made (where country and category are arguments) to pull all details for species that fit that category and country criteria. There is a loading gif of a surgeon fish while this API call is being performed. Once complete the page is populated with flip cards of all the species returned. The front of the card is a single image of the species. On the back of the card there is: (1) common name, (2) scientific name, (3) depth, (4) population trend, (5) conservation status, (6) a link to IUCN (conservation website), (7) a button for a modal popup with an image slider.  
 
-![Country_flipcards](rdImages/country_card_flip.gif)
+![Country_flipcards](rdImages/country_card_flipx.gif)
 
-![Image_Slider](Images/image_slider.gif)
+![Image_Slider](Images/image_sliderx.gif)
 
 ### Marine Life Search
 
