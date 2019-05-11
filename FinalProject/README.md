@@ -4,12 +4,12 @@
 
 ![Home](rdImages/Home.png)
 
-I love Scuba Diving! I revolve all of my vacations around scuba diving. The inspiration for this project came from problems I was facing during my vacation planning. When planning a trip I quickly had 10+ tabs open all with little bits of information that I was seeking while planning. In a nutshell....I plan my vacations one of two ways:
+This app is for those whome love Scuba Diving and need some help planning their next vacation. The inspiration for this project began with Sara Hovakeemian, an avid diving enthusiast whom found problems while planning her next scuba diving adventure. She plans her vacations one of two ways:
 
-1) Either I know where I am traveling to and I just want to learn about the marine life I'm going to see. Or,
-2) I want to plan a whole trip around seeing a certain species and I just want to know where I have to go.
+1) Either wanting to learn about the marine life in the location she was traveling to. Or,
+2) Planning a whole trip around seeing a certain species and trying to find out where to go.
 
-Enter.....Marine Buddy! There are 2 ways to search for marine life on this app...either a country search or marine-life search.
+With Marine Buddy, there are 2 ways to search for marine life, either a country search or marine-life search.
 
 ### Country Search
 
@@ -54,5 +54,5 @@ The final schema loaded onto SQL resembles below:
 
 ### Accreditation
 
-I worked on this project with [Jesse Gray](https://github.com/jessewgray) and [Mariaveronica Sayewich](https://github.com/mvsayewich).
+I worked on this project with [Sara Hovakeemian](https://github.com/sarahova) and [Mariaveronica Sayewich](https://github.com/mvsayewich).
 
