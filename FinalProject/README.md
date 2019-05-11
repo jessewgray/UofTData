@@ -23,7 +23,7 @@ Once the user selects a category of marine life from the dropdown, another API c
 
 ![Country_flipcards](rdImages/country_card_flipx.gif)
 
-![Image_Slider](Images/image_sliderx.gif)
+![Image_Slider](rdImages/image_sliderx.gif)
 
 ### Marine Life Search
 
