@@ -2,7 +2,7 @@
 
 ### Topics and technologies coverd over 6 months:
 
-Advanced Excel
+Advanced Excel  
 Pivot Tables
 VBA Scripting
 Fundamental Statistics
