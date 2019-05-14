@@ -32,3 +32,5 @@ Tableau
 Advanced Topics  
 Big Data Analytics with Hadoop  
 Machine Learning  
+
+### For more information about the topics and curriculum covered visit (https://bootcamp.learn.utoronto.ca/data/)
